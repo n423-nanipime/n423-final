@@ -1,0 +1,34 @@
+nav {
+  height: 100px;
+  width: 100%;
+  // fc user snippet
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+
+  .logo {
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    img {
+      height: 100%;
+    }
+  }
+  .links {
+    margin-right: 20px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

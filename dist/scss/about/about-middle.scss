@@ -1,0 +1,43 @@
+.about-middle {
+  margin: 0 auto;
+  min-height: 87%;
+  background-color: #d7dbfc;
+  text-align: center;
+  //background-color: #dad4f0;
+  #app {
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      padding: 2%;
+
+      .about-us {
+        margin-top: 2%;
+      }
+    }
+
+    .privacy {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      padding: 1%;
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      padding: 1%;
+      .medias {
+        margin-top: 1%;
+      }
+    }
+  }
+}
