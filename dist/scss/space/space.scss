@@ -1,4 +1,21 @@
 #space {
-  background: linear-gradient(to bottom, #090950, #473eae, #ac4bd9);
+  background: linear-gradient(to right, #090950, #4b41b8, #ac4bd9), #090950;
+  text-align: center;
+  //background-color: black;
   color: white;
+  height: 100%;
+
+  img {
+    width: 100%;
+  }
+  .space-text {
+    padding: 2%;
+    h2 {
+      padding: 1%;
+    }
+    p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
 }

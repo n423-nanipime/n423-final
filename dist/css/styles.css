@@ -153,11 +153,47 @@ footer {
 }
 
 #space {
-  background: linear-gradient(to bottom, #090950, #473eae, #ac4bd9);
+  background: linear-gradient(to right, #090950, #4b41b8, #ac4bd9), #090950;
+  text-align: center;
   color: white;
+  height: 100%;
+}
+#space img {
+  width: 100%;
+}
+#space .space-text {
+  padding: 2%;
+}
+#space .space-text h2 {
+  padding: 1%;
+}
+#space .space-text p {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#earth {
+  background: linear-gradient(to right, #093f50, #6c95be, #29b788), #090950;
+  text-align: center;
+  color: white;
+  height: 100%;
+}
+#earth img {
+  width: 100%;
+}
+#earth .earth-text {
+  padding: 2%;
+}
+#earth .earth-text h2 {
+  padding: 1%;
+}
+#earth .earth-text p {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 #news {
+  background-color: #a0afdb;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -199,15 +235,8 @@ footer {
   justify-content: space-evenly;
 }
 
-.register-middle {
-  min-height: 87%;
-  background-color: #e9f3fc;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.register-middle #app .placeholder .inputs {
-  flex-direction: column;
+#register {
+  background-color: #a0afdb;
 }
 
 /*# sourceMappingURL=styles.css.map */

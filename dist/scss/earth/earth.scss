@@ -1,0 +1,20 @@
+#earth {
+  background: linear-gradient(to right, #093f50, #6c95be, #29b788), #090950;
+  text-align: center;
+  color: white;
+  height: 100%;
+
+  img {
+    width: 100%;
+  }
+  .earth-text {
+    padding: 2%;
+    h2 {
+      padding: 1%;
+    }
+    p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+}
