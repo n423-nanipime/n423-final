@@ -263,17 +263,55 @@ footer {
   padding-bottom: 2%;
   width: 60%;
 }
-
-.login-middle {
-  min-height: 87%;
-  background-color: #e9f3fc;
+#news-one #comments,
+#news-two #comments,
+#news-three #comments,
+#news-four #comments,
+#news-five #comments,
+#news-six #comments {
+  padding: 2%;
+}
+#news-one #addComments,
+#news-two #addComments,
+#news-three #addComments,
+#news-four #addComments,
+#news-five #addComments,
+#news-six #addComments {
+  padding-bottom: 5%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: column;
+}
+
+#login {
+  background-color: #a0afdb;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+#login .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 #register {
   background-color: #a0afdb;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 25%;
+  padding-bottom: 25%;
+}
+#register .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=styles.css.map */

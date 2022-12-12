@@ -66,4 +66,16 @@
     padding-bottom: 2%;
     width: 60%;
   }
+
+  #comments {
+    padding: 2%;
+  }
+
+  #addComments {
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
 }

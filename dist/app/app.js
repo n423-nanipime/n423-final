@@ -1,5 +1,14 @@
 import * as MODEL from "./model.js";
 
+var obj = {
+  Comments: [
+    {
+      name: "User One",
+      comment: "Lorem ipsum.",
+    },
+  ],
+};
+
 function route() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
@@ -16,6 +25,40 @@ function route() {
       MODEL.changePage(pageID, subPageID);
     }
   }
+}
+
+function edit(inputID) {
+  $("#app #comments #list #" + inputID).prop("disabled", false);
+}
+
+function updateCommentData(inputID) {
+  //get value
+  console.log(inputID);
+
+  //change value of object in that array
+  let commentsValue = $("#app #comments #list #" + inputID).val();
+
+  // this is the array we will update obj.Students
+  //find object in array
+  let commentObj = obj.Comments[inputID];
+  console.log("before name", commentObj);
+  commentObj.name = commentsValue;
+  console.log("after name", commentObj);
+
+  //display new name in input
+
+  $("#app #comments #list #" + inputID).prop("disabled", true);
+}
+
+function deleteCommentData(commentID) {
+  // checks if right object
+  let commentObj = obj.Comments[commentID];
+  console.log(commentObj);
+
+  // to remove something .splice() or .pop()
+  obj.Comments.splice(commentID, 1);
+  console.log(obj.Comments);
+  loopData();
 }
 
 // function getDate() {
@@ -66,15 +109,34 @@ function initListeners() {
 function initApp() {
   $(window).on("hashchange", route);
   loopData();
+  addListeners();
 }
 
 function loopData() {
-  let hashTag = window.location.hash;
-  let pageID = hashTag.replace("#", "");
+  $("#app #comments #list").html(``);
+  $.each(obj.Comments, (idx, comment) => {
+    $("#app #comments #list").append(
+      `<input type="text" id="${idx}" value="${comment.name}" disabled="true"/><button onclick="edit(${idx})">Edit</button><button onclick="updateCommentData(${idx})">Save</button><button onclick="deleteCommentData(${idx})">Delete</button>`
+    );
+  });
+}
 
-  var pages = document.getElementById("app");
+function addListeners() {
+  $("#app #addCommentSubmit").click((e) => {
+    e.preventDefault();
+    // below done in jquery
+    let un = $("#userName").val();
+    let cm = $("#comment").val();
 
-  $(pages).html(MODEL.changePage(pageID));
+    // or could write it within the push()
+    let newCommentObj = {
+      name: un,
+      comment: cm,
+    };
+
+    obj.Comments.push(newCommentsObj);
+    loopData();
+  });
 }
 
 function getWeather(location) {
@@ -85,7 +147,9 @@ function getWeather(location) {
 
 $(document).ready(function () {
   initListeners();
+  //addListeners();
   initApp();
+  console.log("my obj", obj["Comments"]);
 });
 
 $(window).on("load", function () {

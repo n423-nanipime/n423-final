@@ -46,31 +46,22 @@ var getAllDataTwoBtn = document.getElementById("getAllDataTwo");
 var queryBtn = document.getElementById("searchBtn");
 var googleBtn = document.getElementById("googleBtn");
 
-// add a document
-// await setDoc(doc(db, "comments", "new-comment-id"), data);
-const docRef = await addDoc(collection(db, "comments"), {
-  name: "Comment One",
-  message: "Hello. Interesting.",
-});
-console.log("Document written with ID: ", docRef.id);
+// // add a document
+// const docRef = await addDoc(collection(db, "comments"), {
+//   name: "Comment One",
+//   message: "Hello. Interesting.",
+// });
+// console.log("Document written with ID: ", docRef.id);
 
-// update document
-const comment2Ref = doc(db, "comments", "Comment Two");
+// // update document
+// const comment2Ref = doc(db, "comments", "Comment Two");
 
-await updateDoc(comment2Ref, {
-  message: true,
-});
+// await updateDoc(comment2Ref, {
+//   message: true,
+// });
 
-// delete document
-await deleteDoc(doc(db, "comments", "Comment Two"));
-
-// logInBtn.addEventListener("click", login);
-// logOutBtn.addEventListener("click", logout);
-// addUserBtn.addEventListener("click", addUserToDB);
-// getAllDataBtn.addEventListener("click", getAllData);
-// getAllDataTwoBtn.addEventListener("click", getAllDataAlso);
-// queryBtn.addEventListener("click", queryData);
-// googleBtn.addEventListener("click", signInWithGoogle);
+// // delete document
+// await deleteDoc(doc(db, "comments", "Comment Two"));
 
 function signInWithGoogle() {
   const auth = getAuth();

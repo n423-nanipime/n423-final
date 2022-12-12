@@ -1,7 +1,17 @@
-.login-middle {
-  min-height: 87%;
-  background-color: #e9f3fc;
+#login {
+  background-color: #a0afdb;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  //flex-direction: column;
+  padding-top: 25%;
+  padding-bottom: 25%;
+  //padding: 2%;
+  .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    flex-direction: column;
+  }
 }
