@@ -3,13 +3,52 @@ import * as MODEL from "./model.js";
 function route() {
   let hashTag = window.location.hash;
   let pageID = hashTag.replace("#", "");
+  let pageIDArray = pageID.split("/");
+  pageID = pageIDArray[0];
+  let subPageID = pageIDArray[1];
 
   if (pageID == "") {
     MODEL.changePage("home");
   } else {
-    MODEL.changePage(pageID);
+    if (pageID == subPageID) {
+      MODEL.changePage(pageID);
+    } else {
+      MODEL.changePage(pageID, subPageID);
+    }
   }
 }
+
+// function getDate() {
+//   return document.getElementById("dateSearch").ariaValueMax;
+// }
+
+// async function call() {
+//   let request = "";
+//   fetch("../secrets.json")
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .then(async function (myJSON) {
+//       request =
+//         `https://api.nasa.gov/planetary/apod?date=` +
+//         getDate() +
+//         `&api_key=` +
+//         myJSON.api_key;
+//       await fetch(request)
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (myJSON) {
+//           // descrip
+//           let p = document.getElementById("description");
+//           p.innerHTML = myJSON.explanation;
+
+//           // img
+//           let img = document.getElementById("spacePic");
+//           img.src = myJSON.url;
+//         });
+//     });
+// }
 
 function initListeners() {
   //MODEL.getAllNames();
